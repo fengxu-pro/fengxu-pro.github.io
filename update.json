@@ -2,9 +2,9 @@
   "versionCode": 20,
   "versionName": "1.1.17-alpha",
   "url": "https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.17/SentryGuard-v1.1.17-alpha-debug.apk",
-  "sizeBytes": 90000000,
-  "sha256": "（用 certutil -hashfile 算出来的小写十六进制）",
+  "sizeBytes": 86192009,
+  "sha256": "9192239d91de6a949617858a7b15d050a0c28269f0a2583667f298115bbbf7ff",
   "force": false,
-  "notes": "本次更新内容……",
+  "notes": "控制页 3D 车模放大 + 6 色车漆换色优化 + 应用内自动升级。",
   "publishedAt": "2026-09-21"
 }
