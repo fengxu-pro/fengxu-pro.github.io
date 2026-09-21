@@ -1,0 +1,10 @@
+{
+  "versionCode": 20,
+  "versionName": "1.1.17-alpha",
+  "url": "https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.17/SentryGuard-v1.1.17-alpha-debug.apk",
+  "sizeBytes": 90000000,
+  "sha256": "（用 certutil -hashfile 算出来的小写十六进制）",
+  "force": false,
+  "notes": "本次更新内容……",
+  "publishedAt": "2026-09-21"
+}
