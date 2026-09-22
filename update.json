@@ -1,10 +1,10 @@
 {
-  "versionCode": 24,
-  "versionName": "1.1.21-alpha",
-  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.21/SentryGuard-1.1.21-alpha-debug.apk",
+  "versionCode": 25,
+  "versionName": "1.1.22-alpha",
+  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.22/SentryGuard-1.1.22-alpha-debug.apk",
   "sizeBytes": 86834265,
-  "sha256": "dd027f04095599757799ff2e12709686fb7ca5f1e7fcd8c9d3f466d250663ab0",
+  "sha256": "21d2499d7212cf9ac4353f3f55da513bdb25fd84e75d42eedae4f762a0174248",
   "force": false,
-  "notes": "v1.1.21-alpha 更新说明\n\n- 修复：进入/切出「控制」页必崩的闪退（v1.1.19 起引入）。\n  根因：Car3DFilamentView.release() 在 Compose onRelease 时立即 engine.destroy()，\n  但此时 View 还挂在窗口上，随后 View detach 时 ModelViewer 内部的 UiHelper 回调\n  在已销毁的引擎上访问 swapChain / 触发帧回调 → native SIGSEGV（Kotlin try/catch 抓不住）。\n  修复：release() 只做软停止（停渲染循环 + 释放模型/贴图），真正的 engine.destroy()\n  推迟到 View 真正脱离窗口（onDetachedFromWindow）之后，避开与 UiHelper detach 的竞态。\n- 车模：清漆光泽材质 + 6 色鲜亮换色贴图（v1.1.19）。\n- 升级下载器：多镜像轮换 + 断点续传 + 停滞看门狗（v1.1.20）。",
+  "notes": "v1.1.22 更新说明\n\n- 修复：控制页 3D 车模闪退（v1.1.19 起的回归，本次根治）。\n  根因：Car3DFilamentView 此前在 Compose `remember` 中预创建并跨次复用，离开页面后\n  引擎已销毁，再次进入会复用「僵尸视图」挂在已死引擎上 → Filament 原生竞态 SIGSEGV。\n  修复：改为在 AndroidView 的 factory 内每次进入新建引擎、onRelease 销毁；\n  同时修正 release() 误用 removeCallbacksAndMessages(null) 取消引擎销毁导致泄漏的问题。\n- 车模：清漆光泽材质 + 6 色鲜亮换色贴图（v1.1.19）。\n- 升级下载器：多镜像轮换 + 断点续传 + 停滞看门狗（v1.1.20）。",
   "publishedAt": "2026-09-22"
 }
