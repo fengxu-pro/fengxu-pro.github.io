@@ -1,10 +1,10 @@
 {
-  "versionCode": 23,
-  "versionName": "1.1.20-alpha",
-  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.20/SentryGuard-1.1.20-alpha-debug.apk",
-  "sizeBytes": 86834269,
-  "sha256": "3e1c91fa83e4aafdee1d47b6451f75fbc4d2e103974556eaa97635e47dc56784",
+  "versionCode": 24,
+  "versionName": "1.1.21-alpha",
+  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.21/SentryGuard-1.1.21-alpha-debug.apk",
+  "sizeBytes": 86834265,
+  "sha256": "dd027f04095599757799ff2e12709686fb7ca5f1e7fcd8c9d3f466d250663ab0",
   "force": false,
-  "notes": "v1.1.20-alpha 更新说明\n\n- 修复：应用内升级下载卡死在中间（免费镜像掐断长连接/慢速滴流）。\n  下载器新增：多镜像自动轮换（ghproxy.net -> ghfast.top -> 直连）、\n  断点续传（失败/停滞从已下载字节继续）、45 秒停滞看门狗、进度节流。\n- 车模：清漆光泽材质 + 6 色鲜亮换色贴图（v1.1.19）。\n- 修复：快速切页/狂点底栏的偶发闪退（Filament 引擎销毁竞态，v1.1.19）。",
+  "notes": "v1.1.21-alpha 更新说明\n\n- 修复：进入/切出「控制」页必崩的闪退（v1.1.19 起引入）。\n  根因：Car3DFilamentView.release() 在 Compose onRelease 时立即 engine.destroy()，\n  但此时 View 还挂在窗口上，随后 View detach 时 ModelViewer 内部的 UiHelper 回调\n  在已销毁的引擎上访问 swapChain / 触发帧回调 → native SIGSEGV（Kotlin try/catch 抓不住）。\n  修复：release() 只做软停止（停渲染循环 + 释放模型/贴图），真正的 engine.destroy()\n  推迟到 View 真正脱离窗口（onDetachedFromWindow）之后，避开与 UiHelper detach 的竞态。\n- 车模：清漆光泽材质 + 6 色鲜亮换色贴图（v1.1.19）。\n- 升级下载器：多镜像轮换 + 断点续传 + 停滞看门狗（v1.1.20）。",
   "publishedAt": "2026-09-22"
 }
