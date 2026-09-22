@@ -1,10 +1,10 @@
 {
-  "versionCode": 22,
-  "versionName": "1.1.19-alpha",
-  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.19/SentryGuard-1.1.19-alpha-debug.apk",
-  "sizeBytes": 86834265,
-  "sha256": "7fbe4a94dd411498f985e925780735856af7809316114d7f37588925ef4c075d",
+  "versionCode": 23,
+  "versionName": "1.1.20-alpha",
+  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.20/SentryGuard-1.1.20-alpha-debug.apk",
+  "sizeBytes": 86834269,
+  "sha256": "3e1c91fa83e4aafdee1d47b6451f75fbc4d2e103974556eaa97635e47dc56784",
   "force": false,
-  "notes": "v1.1.19-alpha 更新。",
+  "notes": "v1.1.20-alpha 更新说明\n\n- 修复：应用内升级下载卡死在中间（免费镜像掐断长连接/慢速滴流）。\n  下载器新增：多镜像自动轮换（ghproxy.net -> ghfast.top -> 直连）、\n  断点续传（失败/停滞从已下载字节继续）、45 秒停滞看门狗、进度节流。\n- 车模：清漆光泽材质 + 6 色鲜亮换色贴图（v1.1.19）。\n- 修复：快速切页/狂点底栏的偶发闪退（Filament 引擎销毁竞态，v1.1.19）。",
   "publishedAt": "2026-09-22"
 }
