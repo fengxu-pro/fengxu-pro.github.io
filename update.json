@@ -1,7 +1,7 @@
 {
   "versionCode": 22,
   "versionName": "1.1.19-alpha",
-  "url": "https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.19/SentryGuard-1.1.19-alpha-debug.apk",
+  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.19/SentryGuard-1.1.19-alpha-debug.apk",
   "sizeBytes": 86834265,
   "sha256": "7fbe4a94dd411498f985e925780735856af7809316114d7f37588925ef4c075d",
   "force": false,
