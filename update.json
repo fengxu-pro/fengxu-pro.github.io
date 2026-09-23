@@ -1,10 +1,10 @@
 {
-  "versionCode": 33,
-  "versionName": "1.1.30-alpha",
-  "url": "https://ghproxy.net/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.30/SentryGuard-1.1.30-alpha-debug.apk",
+  "versionCode": 34,
+  "versionName": "1.1.31-alpha",
+  "url": "https://fengxu-pro.github.io/apk/SentryGuard-1.1.31-alpha-debug.apk",
   "sizeBytes": 86699529,
-  "sha256": "b04bdce376274359df849eca7d403f962e4a5d3fb2b223e064c9e73d2c0e2e0a",
+  "sha256": "dd770defed2918316770ff4a5efc036095d4dd83d75669ba9b9bd8389f721880",
   "force": false,
-  "notes": "v1.1.30 更新说明\n\n- 控制页 3D 车模：彻底修复进入控制页偶发闪退（此前部分机型进入即崩溃），现在稳定可用。\n- 车漆：去除白色车漆下的杂色残留，颜色更纯净；整体更有光泽，不再发旧、发哑。\n- 玻璃 / 车顶：修复死黑问题，现在更通透自然，结构边界过渡更柔和。\n- 车模表面\"麻点 / 噪点\"反光问题已根治（此前玻璃与车漆表面有密集亮点），反射均匀、顺滑。\n- 渲染：优化室内外灯光与反射强度，降低高光过曝，观感更接近实车。",
-  "publishedAt": "2026-09-22"
+  "notes": "v1.1.31 更新说明\n\n- 控制页 3D 车模：彻底修复进入控制页偶发闪退，稳定可用。\n- 车漆：去除白色车漆下的杂色残留，颜色更纯净、更有光泽，不再发旧发哑。\n- 玻璃 / 车顶：修复死黑问题，更通透自然，结构边界过渡更柔和。\n- 车模表面\"麻点 / 噪点\"反光问题已根治，反射均匀顺滑。\n- 渲染：优化室内外灯光与反射强度，降低高光过曝，观感更接近实车。\n- OTA 升级器修复：此前免费镜像故障会导致更新卡在 HTTP 416 死循环、无法安装。\n  现改为多地址自动轮换（镜像 → GitHub 直连 → Pages 托管）、416 自愈重下、\n  切换下载源时清掉不可信的续传碎片，升级更稳，不会再卡死。",
+  "publishedAt": "2026-09-23"
 }
