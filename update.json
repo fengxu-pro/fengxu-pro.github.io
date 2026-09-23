@@ -1,10 +1,10 @@
 {
-  "versionCode": 35,
-  "versionName": "1.1.32-alpha",
-  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.32/SentryGuard-1.1.32-alpha-debug.apk",
+  "versionCode": 36,
+  "versionName": "1.1.33-alpha",
+  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.33/SentryGuard-1.1.33-alpha-debug.apk",
   "sizeBytes": 86699521,
-  "sha256": "51f8f2f92d2a1e1e11116ebf64986323129590b557838d8db33a41307f11a09e",
+  "sha256": "836d5db98350e20acdd4ecf7d1699bb6c7f64f3d40db0dd147076832204fb301",
   "force": false,
-  "notes": "v1.1.32 更新说明\n\n- 3D 车模\"麻点/噪点\"真正根治：此前车顶、玻璃表面在缩放视角下出现密集\n  白色噪点，根因是模型贴图采样方式错误（最近邻过滤），放大缩小都会\n  产生采样噪斑。已改为三线性过滤，任意缩放角度下漆面与玻璃都平滑干净。\n- 配合上一版的粗糙度/法线修复，车顶与玻璃观感进一步细腻自然。\n- OTA 升级链路保持多源自动轮换与断点续传，升级更稳。",
+  "notes": "v1.1.33 更新说明\n\n- 根治 OTA 升级时的 HTTP 416 死循环：此前免费镜像对\"断点续传 Range 请求\"\n  处理不稳定会回 416，且上一会话残留的半截文件会让首屏请求直接带 Range，\n  一上来就 416。本次重构下载器：\n  1) 每次升级会话开始先清掉残留半截文件，首屏必为完整 200，从根上消灭首屏 416；\n  2) 只在\"本会话内刚下出半截\"时才续传；一旦某源回 416，立刻丢弃半截、该源改走\n     完整下载，绝不死循环；\n  3) 候选顺序 ghfast → ghproxy → GitHub 直连 → Pages，单源内部先续传再整文件重试。\n- 3D 车模观感（三线性过滤、磨砂玻璃）保持上一版效果不变。\n- 校验仍是硬门槛：SHA-256 对不上当场删除，绝不安装被篡改的包。",
   "publishedAt": "2026-09-23"
 }
