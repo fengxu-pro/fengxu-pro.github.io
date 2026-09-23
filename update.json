@@ -1,10 +1,10 @@
 {
-  "versionCode": 36,
-  "versionName": "1.1.33-alpha",
-  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.33/SentryGuard-1.1.33-alpha-debug.apk",
-  "sizeBytes": 86699521,
-  "sha256": "836d5db98350e20acdd4ecf7d1699bb6c7f64f3d40db0dd147076832204fb301",
+  "versionCode": 37,
+  "versionName": "1.1.34-alpha",
+  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.34/SentryGuard-1.1.34-alpha-debug.apk",
+  "sizeBytes": 86699525,
+  "sha256": "5b1503bc6561bcbf2cb228cb2977bf34acd7b83ee4188439f8272b3cd743e2de",
   "force": false,
-  "notes": "v1.1.33 更新说明\n\n- 根治 OTA 升级时的 HTTP 416 死循环：此前免费镜像对\"断点续传 Range 请求\"\n  处理不稳定会回 416，且上一会话残留的半截文件会让首屏请求直接带 Range，\n  一上来就 416。本次重构下载器：\n  1) 每次升级会话开始先清掉残留半截文件，首屏必为完整 200，从根上消灭首屏 416；\n  2) 只在\"本会话内刚下出半截\"时才续传；一旦某源回 416，立刻丢弃半截、该源改走\n     完整下载，绝不死循环；\n  3) 候选顺序 ghfast → ghproxy → GitHub 直连 → Pages，单源内部先续传再整文件重试。\n- 3D 车模观感（三线性过滤、磨砂玻璃）保持上一版效果不变。\n- 校验仍是硬门槛：SHA-256 对不上当场删除，绝不安装被篡改的包。",
+  "notes": "v1.1.34 更新说明\n\n- 根治「检查更新卡在旧版本」的陷阱：此前更新清单的多个源（jsDelivr / GitHub Pages）\n  只要有一个滞后，检查逻辑会取第一个合法清单就返回；若该源版本号等于当前版本，\n  就误判为「已是最新」并收工，导致用户始终拿不到新版本。本次改为「收集所有可达源、\n  取版本号最高的那份」，任何单一源滞后都不再能把你钉死在旧版。\n- 上一版（v1.1.33）的 OTA 416 死循环修复、3D 车模三线性过滤与磨砂玻璃观感保持不变。\n- 校验仍是硬门槛：SHA-256 对不上当场删除，绝不安装被篡改的包。",
   "publishedAt": "2026-09-23"
 }
