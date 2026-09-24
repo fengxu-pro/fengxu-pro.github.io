@@ -1,10 +1,10 @@
 {
-  "versionCode": 37,
-  "versionName": "1.1.34-alpha",
-  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.34/SentryGuard-1.1.34-alpha-debug.apk",
-  "sizeBytes": 86699525,
-  "sha256": "5b1503bc6561bcbf2cb228cb2977bf34acd7b83ee4188439f8272b3cd743e2de",
+  "versionCode": 38,
+  "versionName": "1.1.35",
+  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.35/SentryGuard-1.1.35-debug.apk",
+  "sizeBytes": 86068025,
+  "sha256": "931efce97e0f8e7357e0c7fed2346f357108193885dbf55f05dec02aa6bf7951",
   "force": false,
-  "notes": "v1.1.34 更新说明\n\n- 根治「检查更新卡在旧版本」的陷阱：此前更新清单的多个源（jsDelivr / GitHub Pages）\n  只要有一个滞后，检查逻辑会取第一个合法清单就返回；若该源版本号等于当前版本，\n  就误判为「已是最新」并收工，导致用户始终拿不到新版本。本次改为「收集所有可达源、\n  取版本号最高的那份」，任何单一源滞后都不再能把你钉死在旧版。\n- 上一版（v1.1.33）的 OTA 416 死循环修复、3D 车模三线性过滤与磨砂玻璃观感保持不变。\n- 校验仍是硬门槛：SHA-256 对不上当场删除，绝不安装被篡改的包。",
-  "publishedAt": "2026-09-23"
+  "notes": "v1.1.35 更新说明\n\n- 根治 3D 车模玻璃顶盖「黑麻子」：真因是 AI 图生 3D 时空腔化产生的内外双层壳，\n  内壳朝向车体内部、贴图采样到图集黑底，透过外壳与玻璃的缝隙露出，形成一片片\n  边缘锐利的黑色三角碎片。本次从几何层直接删除了 13402 个内壳/垃圾三角形\n  （52565 → 39163 面），模型更轻（1.6MB 几何 + 2.3MB 贴图），观感干净。\n- 保留此前的采样器三线性过滤（minFilter/magFilter=9729）与磨砂玻璃材质修复。\n- OTA 通道保持 v1.1.34 的多源取最高版本逻辑；SHA-256 校验仍是硬门槛。",
+  "publishedAt": "2026-09-24"
 }
