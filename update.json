@@ -1,10 +1,10 @@
 {
-  "versionCode": 41,
-  "versionName": "1.1.38",
-  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.38/SentryGuard-1.1.38-debug.apk",
-  "sizeBytes": 86860337,
-  "sha256": "5a11ad17515c89ac4bea458a7b94e29d6ce776d74ab2cd8b3960a0a103768c40",
+  "versionCode": 42,
+  "versionName": "1.1.39",
+  "url": "https://ghfast.top/https://github.com/fengxu-pro/sentryguard-releases/releases/download/v1.1.39/SentryGuard-1.1.39-debug.apk",
+  "sizeBytes": 86918025,
+  "sha256": "77c21b9c9ff620b8866a6b00a3a11a6f8c5e85338f570ef583aad97455bb6ce3",
   "force": false,
-  "notes": "v1.1.38 更新说明\n\n- OTA 安装方式升级为更稳的 FileProvider + 系统安装器直接接管方案：\n  下载完成并经 SHA-256 校验后，APK 通过 FileProvider 以 content:// URI 交给系统\n  安装器（独立 Activity）完成安装。App 进程不再参与安装后续流程，因此即便进程被回收/闪退\n  也不会中断安装 —— 根治此前 PackageInstaller.Session + 自定义 Receiver 转发方案下\n  「下载完闪退、仍是旧版」的问题。\n- 已移除 UpdateInstallReceiver 及 PackageInstaller.Session 相关代码与清单注册。\n\nv1.1.37 更新说明\n\n- 紧急修复 v1.1.35/36 中 3D 车模显示为碎片的严重问题：此前重打包模型时，\n  解码交错存储的量化顶点坐标出错，导致发送到手机的模型几何损坏。\n  本次改为最小差异方式更新（顶点与贴图数据与 v1.1.34 完全一致，仅删除\n  内部空壳三角形的索引），渲染行为与 v1.1.34 完全一致。\n- 保留内壳删除：清理了模型内部 AI 生成的空壳碎片三角形（52565→45041 面），\n  玻璃顶盖区域的黑色斑点应明显减少。\n- 含 v1.1.36 的 OTA 安装闪退修复。",
+  "notes": "v1.1.39 更新说明\n\n- 修复 3D 车模玻璃顶盖/风挡区域残留的黑色斑点（黑麻子）：根因为 AI 生成贴图的\n  UV 图集各色岛边缘存在一圈未被染色覆盖的黑色毛边，车身顶部三角恰落在毛边上，\n  采样到黑底形成斑点。本次采用贴图边缘填充（UV padding / edge-bleed）修复——\n  将靠近色岛的黑底像素用最近色岛颜色回填（24px 半径），而非改动几何。\n- 几何与之前完全一致（45041 面，仅换贴图），渲染行为无回归。\n- 确定性纹理采样验证：玻璃顶区域采样到黑纹素的三角由 101 个降至 1 个（约 99% 消除）。\n\nv1.1.38 更新说明\n\n- OTA 安装方式升级为更稳的 FileProvider + 系统安装器直接接管方案：\n  下载完成并经 SHA-256 校验后，APK 通过 FileProvider 以 content:// URI 交给系统\n  安装器（独立 Activity）完成安装。App 进程不再参与安装后续流程，因此即便进程被回收/闪退\n  也不会中断安装 —— 根治此前 PackageInstaller.Session + 自定义 Receiver 转发方案下\n  「下载完闪退、仍是旧版」的问题。\n- 已移除 UpdateInstallReceiver 及 PackageInstaller.Session 相关代码与清单注册。\n\nv1.1.37 更新说明\n\n- 紧急修复 v1.1.35/36 中 3D 车模显示为碎片的严重问题：此前重打包模型时，\n  解码交错存储的量化顶点坐标出错，导致发送到手机的模型几何损坏。\n  本次改为最小差异方式更新（顶点与贴图数据与 v1.1.34 完全一致，仅删除\n  内部空壳三角形的索引），渲染行为与 v1.1.34 完全一致。\n- 保留内壳删除：清理了模型内部 AI 生成的空壳碎片三角形（52565→45041 面），\n  玻璃顶盖区域的黑色斑点应明显减少。\n- 含 v1.1.36 的 OTA 安装闪退修复。",
   "publishedAt": "2026-10-08"
 }
